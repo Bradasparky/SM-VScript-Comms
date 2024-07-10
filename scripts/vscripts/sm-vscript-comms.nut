@@ -266,7 +266,7 @@ class VScriptCall_
 				case VScriptReturnType.Bool: NetProps.SetPropBool(proxies[6], PROP_BOOL, returnval); break;
 				case VScriptReturnType.Int: NetProps.SetPropInt(proxies[6], PROP_INT, returnval); break;
 				case VScriptReturnType.Float: NetProps.SetPropFloat(proxies[6], PROP_FLOAT, returnval); break;
-				case VScriptReturnType.String: NetProps.SetPropString(proxies[6], PROP_STRING, returnval); break;
+				case VScriptReturnType.String: NetProps.SetPropString(proxies[6], PROP_STRING, returnval == null ? "\0" : returnval); break;
 				case VScriptReturnType.Vector: NetProps.SetPropVector(proxies[6], PROP_VECTOR, returnval); break;
 				case VScriptReturnType.QAngle: NetProps.SetPropVector(proxies[6], PROP_VECTOR, Vector(returnval.x, returnval.y, returnval.z)); break;
 			}
